@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RPSLS</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <a href="#" class="shoot btn btn-default" id="rock" ><i class="fa fa-hand-rock-o fa-5x"></i></a>
+        <a href="#" class="shoot btn btn-danger" id="paper"><i class="fa fa-hand-paper-o fa-5x"></i></a>
+        <a href="#" class="shoot btn btn-success" id="scissor"><i class="fa fa-hand-scissors-o fa-5x"></i></a>
+        <a href="#" class="shoot btn btn-info" id="lizard"><i class="fa fa-hand-lizard-o fa-5x"></i></a>
+        <a href="#" class="shoot btn btn-warning" id="spock"><i class="fa fa-hand-spock-o fa-5x"></i></a>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <table class="table">
+            <thead>
+              <tr>
+                <th colspan="4" id="table-head">Round Score</th>
+              </tr>
+            </thead>
+            <tbody id="thingsToDo">
+              <tr>
+                <td>Your Score</td>
+                <td>Computer Score</td>
+                <td>Throws</td>
+              </tr>
+              <tr>
+                <td><p id="yourScore"></p></td>
+                <td><p id="computerScore"></p></td>
+                <td><p id="shoot"></p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+      <div class="row">
+      <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <table class="table">
+            <thead>
+              <tr>
+                <th colspan="4" id="table-head">Overall Score</th>
+              </tr>
+            </thead>
+            <tbody id="thingsToDo">
+              <tr>
+                <td>Rounds Won</td>
+                <td>Rounds Lost</td>
+                <td>Tied Rounds</td>
+                <td>Total Rounds</td>
+              </tr>
+              <tr>
+                <td><p id="roundWon"></p></td>
+                <td><p id="roundLost"></p></td>
+                <td><p id="tiedRounds"></p></td>
+                <td><p id="round"></p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="win">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">YOU WIN!</h4>
+        </div>
+        <div class="modal-body">
+          <p>You Win that Round&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="lose">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">YOU LOSE!!!</h4>
+        </div>
+        <div class="modal-body">
+          <p>You have disgraced your family&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="tie">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">PFFFTTTT!!!!</h4>
+        </div>
+        <div class="modal-body">
+          <p>I guess we'll call it a draw&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/rpsls.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
