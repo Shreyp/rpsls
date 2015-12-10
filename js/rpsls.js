@@ -23,7 +23,7 @@ $(document).ready(function() {
         .attr("data-status", "on")
         .html("Start Game");
       $(".shoot").unbind();
-      $("h1").empty();
+      $("h2").empty();
       $(".clear").empty();
       $(".allClear").empty();
       shoot = yourScore = compScore = round = roundWon = roundLost = tiedRounds = 0;
@@ -96,7 +96,7 @@ $(document).ready(function() {
       if (shoot === 5) {
         round++;
         $("#round").html(round);
-        $("h1").empty();
+        $("h2").empty();
         $(".clear").empty();
         if (yourScore > compScore) {
           roundWon++;
