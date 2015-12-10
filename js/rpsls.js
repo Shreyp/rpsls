@@ -110,7 +110,7 @@ $(document).ready(function() {
           roundLost++;
           $("#roundLost").html(roundLost);
           $(".modal-title").html("YOU LOSE!!!");
-          $(".modal-text").html("You have disgraced your family...");
+          $(".modal-text").html("You have disgraced your family.");
           $("#win").modal({
             keyboard: false
           });
@@ -129,7 +129,7 @@ $(document).ready(function() {
   };
 
     function enableAnimation() {
-    $(".btn-warning").on("mouseenter", function() {
+    $(".change").on("mouseenter", function() {
       $(this).toggleClass("pulse");
     }).on("mouseleave", function() {
       $(this).toggleClass("pulse");
