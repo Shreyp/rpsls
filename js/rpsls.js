@@ -15,6 +15,7 @@ $(document).ready(function() {
         shoot++;
         $("#shoot").html(shoot);
         var compChoice = choiceRPS[ranNum];
+        $("#computerChoice").html(compChoice);
         console.log(userChoice);
         console.log(compChoice);
 
