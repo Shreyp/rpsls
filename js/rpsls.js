@@ -13,8 +13,9 @@ $(document).ready(function() {
         .addClass("btn-success")
         .removeClass("btn-danger")
         .attr("data-status", "off")
-        .html("Game On");
+        .html("Reset Game");
       bindControls();
+      enableAnimation();
     } else {
       $(this)
         .addClass("btn-danger")
@@ -118,6 +119,14 @@ $(document).ready(function() {
         };
         shoot = yourScore = compScore = 0;
       };
+    });
+  };
+
+    function enableAnimation() {
+    $(".btn-warning").on("mouseenter", function() {
+      $(this).toggleClass("pulse");
+    }).on("mouseleave", function() {
+      $(this).toggleClass("pulse");
     });
   };
 });
