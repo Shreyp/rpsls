@@ -101,19 +101,25 @@ $(document).ready(function() {
         if (yourScore > compScore) {
           roundWon++;
           $("#roundWon").html(roundWon);
+          $(".modal-title").html("YOU WIN!");
+          $(".modal-text").html("You win that round.");
           $("#win").modal({
             keyboard: false
           });
         } else if (yourScore < compScore) {
           roundLost++;
           $("#roundLost").html(roundLost);
-          $("#lose").modal({
+          $(".modal-title").html("YOU LOSE!!!");
+          $(".modal-text").html("You have disgraced your family...");
+          $("#win").modal({
             keyboard: false
           });
         } else if (yourScore == compScore) {
           tiedRounds++;
           $("#tiedRounds").html(tiedRounds);
-          $("#tie").modal({
+          $(".modal-title").html("PFFFTTT!!!!");
+          $(".modal-text").html("I guess that round is a tie.");
+          $("#win").modal({
             keyboard: false
           });
         };

@@ -11,44 +11,30 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <button class="btn btn-danger btn-lg" id="toggleGame" data-status="on">Start Game</button>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6 text-center">
         <a href="#" class="shoot btn btn-warning" id="rock" ><i class="fa fa-hand-rock-o fa-5x"></i></a>
         <a href="#" class="shoot btn btn-warning" id="paper"><i class="fa fa-hand-paper-o fa-5x"></i></a>
         <a href="#" class="shoot btn btn-warning" id="scissor"><i class="fa fa-hand-scissors-o fa-5x"></i></a>
         <a href="#" class="shoot btn btn-warning" id="lizard"><i class="fa fa-hand-lizard-o fa-5x"></i></a>
         <a href="#" class="shoot btn btn-warning" id="spock"><i class="fa fa-hand-spock-o fa-5x"></i></a>
       </div>
-      <div class="col-md-4"></div>
     </div>
-  </div>
-
-    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
+        <div class="col-md-6 col-md-offset-4">
           <div class="row">
             <div class="col-md-6">
-              <div class="row">
-                <div col-md-12><H2>Computer Choice</H2></div>
-              </div>
-              <div class="row">
+                <H2>Computer Choice</H2>
                 <h1 id="computerChoice"></h1>
-              </div>
             </div>
             <div class="col-md-6">
-              <div class="row">
-                <div col-md-12><H2>Your Choice</H2></div>
-              </div>
-              <div class="row">
-                <h1 id="yourChoice"></h1>
-              </div>
+              <H2>Your Choice</H2>
+              <h1 id="yourChoice"></h1>
             </div>
           </div>
         </div>
-        <div class="col-md-4"></div>
       </div>      
       <div class="row">
       <div class="col-md-4"></div>
@@ -73,7 +59,6 @@
             </tbody>
           </table>
         </div>
-        <div class="col-md-4"></div>
       </div>
       <div class="row">
       <div class="col-md-4"></div>
@@ -100,7 +85,6 @@
             </tbody>
           </table>
         </div>
-        <div class="col-md-4"></div>
       </div>
     </div>
 
@@ -112,41 +96,7 @@
           <h4 class="modal-title">YOU WIN!</h4>
         </div>
         <div class="modal-body">
-          <p>You Win that Round&hellip;</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-  <div class="modal fade" tabindex="-1" role="dialog" id="lose">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">YOU LOSE!!!</h4>
-        </div>
-        <div class="modal-body">
-          <p>You have disgraced your family&hellip;</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-    <div class="modal fade" tabindex="-1" role="dialog" id="tie">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">PFFFTTTT!!!!</h4>
-        </div>
-        <div class="modal-body">
-          <p>I guess we'll call it a draw&hellip;</p>
+          <p class="modal-text">You Win that Round&hellip;</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
