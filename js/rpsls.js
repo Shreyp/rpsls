@@ -8,18 +8,24 @@ $(document).ready(function() {
   var tiedRounds = 0;
 
   $("#toggleGame").on("click", function() {
-    if ($(this).attr("data-status") === "off") {
+    if ($(this).attr("data-status") === "on") {
       $(this)
         .addClass("btn-success")
         .removeClass("btn-danger")
-        .attr("data-status", "on");
-      $(".shoot").unbind();
+        .attr("data-status", "off")
+        .html("Game On");
+      bindControls();
     } else {
       $(this)
         .addClass("btn-danger")
         .removeClass("btn-success")
-        .attr("data-status", "off");
-      bindControls();
+        .attr("data-status", "on")
+        .html("Start Game");
+      $(".shoot").unbind();
+      $("h1").empty();
+      $(".clear").empty();
+      $(".allClear").empty();
+      shoot = yourScore = compScore = round = roundWon = roundLost = tiedRounds = 0;
     }
   })
 
