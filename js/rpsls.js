@@ -39,51 +39,10 @@ $(document).ready(function() {
 
       if (compChoice == userChoice) {};
 
-      if (userChoice === "rock") {
-        if (compChoice === "lizard" || compChoice === "scissor") {
-          yourScore++;
-        } else {
-          if (compChoice === "paper" || compChoice === "spock") {
-            compScore++;
-          }
-        }
-      };
-      if (userChoice === "paper") {
-        if (compChoice === "rock" || compChoice === "spock") {
-          yourScore++;
-        } else {
-          if (compChoice === "scissor" || compChoice === "lizard") {
-            compScore++;
-          }
-        }
-      };
-      if (userChoice === "scissor") {
-        if (compChoice === "paper" || compChoice === "lizard") {
-          yourScore++;
-        } else {
-          if (compChoice === "rock" || compChoice === "spock") {
-            compScore++;
-          }
-        }
-      };
-      if (userChoice === "lizard") {
-        if (compChoice === "spock" || compChoice === "paper") {
-          yourScore++;
-        } else {
-          if (compChoice === "rock" || compChoice === "scissor") {
-            compScore++;
-          }
-        }
-      };
-      if (userChoice === "spock") {
-        if (compChoice === "rock" || compChoice === "scissor") {
-          yourScore++;
-        } else {
-          if (compChoice === "lizard" || compChoice === "paper") {
-            compScore++;
-          }
-        }
-      };
+      gameRules = {
+        rock
+      }
+
       $("#yourScore").html(yourScore);
       $("#computerScore").html(compScore);
       if (shoot === 5) {
