@@ -9,6 +9,7 @@ $(document).ready(function() {
   var rpslsFirebaseRef = new Firebase("https://luminous-inferno-7691.firebaseio.com/");
 
 
+
   $("#toggleGame").on("click", function() {
     if ($(this).attr("data-status") === "on") {
       $(this)
@@ -18,6 +19,9 @@ $(document).ready(function() {
         .html("Reset Game");
       bindControls();
       enableAnimation();
+      $("#userName").modal({
+        keyboard:false
+      });
     } else {
       $(this)
         .addClass("btn-danger")
