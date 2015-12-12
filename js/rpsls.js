@@ -6,6 +6,8 @@ $(document).ready(function() {
   var roundWon = 0;
   var roundLost = 0;
   var tiedRounds = 0;
+  var rpslsFirebaseRef = new Firebase("https://luminous-inferno-7691.firebaseio.com/");
+
 
   $("#toggleGame").on("click", function() {
     if ($(this).attr("data-status") === "on") {
