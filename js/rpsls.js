@@ -6,6 +6,18 @@ $(document).ready(function() {
   var roundWon = 0;
   var roundLost = 0;
   var tiedRounds = 0;
+  var rpslsRef = new Firebase("https://luminous-inferno-7691.firebaseio.com/");
+
+  rpslsRef.child("playerName").on("value", function(rpslsRefVal) {
+    $("#finalName").html(rpslsRefVal.val());
+  });
+  $(".btn-primary").on("click", function(e) {
+    e.preventDefault();
+    var setUserName = $("input").val();
+    rpslsRef.child("playerName").set($("input").val());
+    $("input").val("");
+    shoot = yourScore = compScore = round = roundWon = roundLost = tiedRounds = 0;
+  });
 
   $("#toggleGame").on("click", function() {
     if ($(this).attr("data-status") === "on") {
@@ -41,9 +53,6 @@ $(document).ready(function() {
       var compChoice = choiceRPS[ranNum];
       $("#computerChoice").html(compChoice);
       $("#yourChoice").html(userChoice);
-      console.log(userChoice);
-      console.log(compChoice);
-
       if (compChoice == userChoice) {};
 
       if (userChoice === "rock") {
@@ -101,25 +110,30 @@ $(document).ready(function() {
         if (yourScore > compScore) {
           roundWon++;
           $("#roundWon").html(roundWon);
-          $(".modal-title").html("YOU WIN!");
+          /*$(".modal-title").html("YOU WIN!");
           $(".modal-text").html("You win that round.");
           $("#win").modal({
             keyboard: false
-          });
+          });*/
         } else if (yourScore < compScore) {
           roundLost++;
           $("#roundLost").html(roundLost);
-          $(".modal-title").html("YOU LOSE!!!");
+          /*$(".modal-title").html("YOU LOSE!!!");
           $(".modal-text").html("You have disgraced your family.");
           $("#win").modal({
             keyboard: false
-          });
+          });*/
         } else if (yourScore == compScore) {
           tiedRounds++;
           $("#tiedRounds").html(tiedRounds);
-          $(".modal-title").html("PFFFTTT!!!!");
+          /*$(".modal-title").html("PFFFTTT!!!!");
           $(".modal-text").html("I guess that round is a tie.");
           $("#win").modal({
+            keyboard: false
+          });*/
+        };
+        if (round === 3) {
+          $("#userName").modal({
             keyboard: false
           });
         };
@@ -128,7 +142,7 @@ $(document).ready(function() {
     });
   };
 
-    function enableAnimation() {
+  function enableAnimation() {
     $(".change").on("mouseenter", function() {
       $(this).toggleClass("pulse");
     }).on("mouseleave", function() {
